@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@dgpg/chatosaurus": "jsr:@dgpg/chatosaurus@^0.1.2",
+    "@oak/oak": "jsr:@oak/oak@^17.1.3"
+  }
+}
