@@ -1,7 +1,7 @@
 import { WebSocketClient } from "@dgpg/chatosaurus";
 
 // Membuat instance client WebSocket dengan alamat server dan opsi reconnect
-const client = new WebSocketClient("wss://hisyam99-websockettest.deno.dev", {
+const client = new WebSocketClient("ws://localhost:8080", {
   // Mengaktifkan fitur reconnect jika koneksi putus
   reconnect: true,
   // Mengatur waktu tunda sebelum reconnect (dalam milidetik)
@@ -47,12 +47,20 @@ setTimeout(() => {
 
 // Mengirimkan perintah broadcast ke server setelah 4 detik
 setTimeout(() => {
-  // Mengirimkan perintah broadcast ke server dengan pesan dan token autentikasi
-  client.invoke("broadcast", { message: "Halo semua dari Deno!", authToken });
-}, 1000);
+  // Mengirimkan perintah broadcast ke server dengan pesan, room ID, dan token autentikasi
+  client.invoke("broadcast", {
+    message: "Halo semua dari Deno!",
+    authToken,
+    roomId: "room1",
+  });
+}, 4000);
 
 // Mengirimkan perintah private message ke server setelah 6 detik
 setTimeout(() => {
   // Mengirimkan perintah private message ke server dengan target ID, pesan, dan token autentikasi
-  client.invoke("privateMessage", { targetId: "e399764f-24c8-47af-8ba7-bcf47c01c34c", message: "Halo dari Deno!", authToken });
-}, 2000);
+  client.invoke("privateMessage", {
+    targetId: "e399764f-24c8-47af-8ba7-bcf47c01c34c",
+    message: "Halo dari Deno!",
+    authToken,
+  });
+}, 6000);

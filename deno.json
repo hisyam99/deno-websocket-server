@@ -2,5 +2,13 @@
   "imports": {
     "@dgpg/chatosaurus": "jsr:@dgpg/chatosaurus@^0.1.2",
     "@oak/oak": "jsr:@oak/oak@^17.1.3"
+  },
+  "deploy": {
+    "project": "10cfd004-c822-4b4b-9f0b-0e83b9d0becc",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "WebSocketSecure_Server.ts"
   }
 }
