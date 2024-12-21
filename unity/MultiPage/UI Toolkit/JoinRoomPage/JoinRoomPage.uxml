@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/JoinRoomPage.uss?fileID=7433441132597879393&amp;guid=22927df4a54920d6e8310c52e644a0dc&amp;type=3#JoinRoomPage" />
+    <ui:VisualElement name="JoinRoomPage" class="page">
+        <ui:Label name="JoinRoomTitle" text="Join a Room" class="title" />
+        <ui:TextField name="UsernameInput" placeholder-text="Masukkan Username" class="input-field" />
+        <ui:TextField name="RoomIdInput" placeholder-text="Masukkan Room ID" class="input-field" />
+        <ui:Button name="JoinRoomButton" text="Join Room" class="button join-room-button" />
+        <ui:Label name="ConnectionStatus" text="Disconnected" class="connection-status" />
+    </ui:VisualElement>
+</ui:UXML>

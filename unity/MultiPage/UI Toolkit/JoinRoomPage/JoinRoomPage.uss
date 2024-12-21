@@ -1,0 +1,60 @@
+.page {
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.connection-status {
+    font-size: 14px;
+    -unity-text-align: middle-center;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.input-field {
+    margin-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 4px;
+    width: 100%;
+}
+
+.button {
+    padding: 6px;
+    border-radius: 4px;
+    min-width: 80px;
+    font-size: 12px;
+}
+
+.join-room-button {
+    background-color: rgb(255, 152, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* Tambahan untuk responsiveness di layar kecil */
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+    .connection-status {
+        font-size: 12px;
+    }
+    .button {
+        min-width: 70px;
+        padding: 4px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/WebSocketUI.uss?fileID=7433441132597879393&amp;guid=22927df4a54920d6e8310c52e644a0dc&amp;type=3#WebSocketUI" />
+    <ui:VisualElement name="container" class="container">
+        <ui:VisualElement name="JoinRoomPage" class="page">
+            <ui:Label name="JoinRoomTitle" text="Join a Room" class="title" />
+            <ui:TextField name="UsernameInput" placeholder-text="Masukkan Username" class="input-field" />
+            <ui:TextField name="RoomIdInput" placeholder-text="Masukkan Room ID" class="input-field" />
+            <ui:Button name="JoinRoomButton" text="Join Room" class="button join-room-button" />
+            <ui:Label name="ConnectionStatus" text="Disconnected" class="connection-status" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ChatPage" class="page" style="display: none;">
+            <ui:Label name="ChatTitle" text="Chat Room" class="title" />
+            <ui:ScrollView name="MessageLog" vertical-scroller-visibility="AlwaysVisible" horizontal-scroller-visibility="AlwaysVisible" class="message-log" style="font-size: 12px; white-space: normal;" />
+            <ui:VisualElement class="input-container">
+                <ui:TextField name="TargetUserIdInput" placeholder-text="Masukkan User ID (Private Message)" class="input-field" />
+                <ui:TextField name="MessageInput" placeholder-text="Masukkan Pesan" class="input-field" />
+                <ui:VisualElement class="button-group">
+                    <ui:Button name="BroadcastButton" text="Broadcast" class="button broadcast-button" />
+                    <ui:Button name="PrivateMessageButton" text="Private Msg" class="button private-message-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
